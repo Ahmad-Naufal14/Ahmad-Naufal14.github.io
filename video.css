@@ -1,0 +1,53 @@
+/* Styling untuk halaman secara keseluruhan */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+}
+
+.video-list {
+    margin-top: 20px;
+}
+
+.video-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.video-list li {
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+video {
+    width: 100%;
+    max-width: 100%;
+}
+
+iframe {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 8px;
+}
