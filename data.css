@@ -1,0 +1,71 @@
+/* Mengatur style untuk keseluruhan halaman */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Judul halaman */
+h1 {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin: 0;
+}
+
+/* Mengatur layout tabel */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style untuk header tabel */
+td {
+    padding: 10px;
+    text-align: left;
+    font-size: 16px;
+    border: 1px solid #ddd;
+}
+
+/* Style untuk baris pertama tabel (berisi gambar) */
+td[rowspan="8"] {
+    text-align: center;
+    padding: 15px;
+    background-color: #f2f2f2;
+}
+
+/* Style untuk gambar mahasiswa */
+img {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Membuat teks dalam tabel lebih menonjol */
+strong {
+    color: #333;
+    font-weight: bold;
+}
+
+/* Membuat baris tabel memiliki warna latar belakang bergantian */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+/* Membuat border tabel lebih halus */
+td {
+    border: 1px solid #ddd;
+}
+
+/* Menambahkan hover effect pada baris tabel */
+tr:hover {
+    background-color: #f1f1f1;
+}
+

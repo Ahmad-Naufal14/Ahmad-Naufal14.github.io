@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Link Saver</title>
+    <link rel="stylesheet" href="daspro.css">
+</head>
+<body>
+
+<header>
+    <h1>Video Link Saver</h1>
+</header>
+
+<div class="container">
+    <h2>Tambahkan Link Video</h2>
+    <input type="url" id="videoUrl" placeholder="Masukkan link video di sini" />
+    <button onclick="saveLink()">Simpan Link</button>
+
+    <div class="video-list">
+        <h3>Daftar Link Video</h3>
+        <ul id="videoList"></ul>
+    </div>
+</div>
+
+<script>
+    // Array untuk menyimpan link video
+    let videoLinks = [];
+
+    // Fungsi untuk menyimpan link video
+    function saveLink() {
+        const videoUrl = document.getElementById("videoUrl").value;
+
+        // Cek jika link valid
+        if (videoUrl && isValidUrl(videoUrl)) {
+            videoLinks.push(videoUrl);
+            updateVideoList();
+            document.getElementById("videoUrl").value = ""; // Reset input
+        } else {
+            alert("Tolong masukkan link video yang valid.");
+        }
+    }
+
+    // Fungsi untuk memvalidasi URL
+    function isValidUrl(url) {
+        const pattern = /^(https?:\/\/[^\s]+)$/;
+        return pattern.test(url);
+    }
+
+    // Fungsi untuk memperbarui daftar video
+    function updateVideoList() {
+        const videoList = document.getElementById("videoList");
+        videoList.innerHTML = ""; // Kosongkan daftar sebelumnya
+
+        videoLinks.forEach((link, index) => {
+            const li = document.createElement("li");
+            const a = document.createElement("a");
+            a.href = link;
+            a.target = "_blank";
+            a.textContent = `Video ${index + 1}: ${link}`;
+            li.appendChild(a);
+            videoList.appendChild(li);
+        });
+    }
+</script>
+
+</body>
+</html>
